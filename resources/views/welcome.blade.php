@@ -33,7 +33,7 @@
 
         <div class="col-md-2 offset-md-5 mt-4">
             <div class="d-grid gap-2">
-                <a class="btn btn-dark" href="">Home</a>
+                <a class="btn btn-dark" href="{{ url('/home') }}">Home</a>
             </div>
         </div>
     </div>

@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RouteController;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +15,14 @@ use App\Http\Controllers\RouteController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+// MOdul 5
+Route::get('home', [HomeController::class, 'index'])->name('home');
 
+Route::get('profile', ProfileController::class)->name('profile');
+
+Route::resource('employees', EmployeeController::class);
+
+// modul 4
 Route::get('/', function () {
     return view('welcome');
 });
