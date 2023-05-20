@@ -17,8 +17,12 @@ use App\Http\Controllers\EmployeeController;
 */
 // MOdul 5
 Route::get('home', [HomeController::class, 'index'])->name('home');
-
+ 
 Route::get('profile', ProfileController::class)->name('profile');
+
+Route::put('/nama/{id}', [EmployeeController::class,'update'])->name('employee.update');
+Route::get('/nama/{id}/edit', [EmployeeController::class,'edit'])->name('employee.edit');
+
 
 Route::resource('employees', EmployeeController::class);
 
