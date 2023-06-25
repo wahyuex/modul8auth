@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RouteController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +20,7 @@ use App\Http\Controllers\Auth\LoginController;
 // Route::get('home', [HomeController::class, 'index'])->name('home');
  
 Route::get('profile', ProfileController::class)->name('profile');
-
+Route::post('profile', ProfileController::class)->name('profile');
 // Route::put('/nama/{id}', [EmployeeController::class,'update'])->name('employee.update');
 // Route::get('/nama/{id}/edit', [EmployeeController::class,'edit'])->name('employee.edit');
 
@@ -95,7 +95,6 @@ Route::get('/', function () {
 //         return "This is item data on admin page";
 //     })->name('items');
 // });
-
 
 Auth::routes();
 
